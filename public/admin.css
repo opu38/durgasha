@@ -1,0 +1,6 @@
+.tabs{display:flex;gap:6px;margin:0 0 12px;flex-wrap:wrap}.tabs button{border:1px solid rgba(255,255,255,.12);background:none;border-radius:99px;padding:5px 14px;font-size:12px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.55)}.tabs .on{background:rgba(255,255,255,.12);color:#fff}
+.row{display:flex;align-items:center;gap:6px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)}.row>span{flex:1;min-width:0;font-weight:600;font-size:14px}.row small{display:block;color:#9b9184;font-weight:400;font-size:12px}
+.row button{background:none;border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:2px 9px;color:rgba(255,255,255,.75)}
+#mbody label{display:block;margin:10px 0;font-size:12px;color:#9b9184}#mbody label input,#mbody label select{display:block;width:100%;margin-top:4px;padding:9px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0b0a08;color:#efe9dd;font-size:14px}
+#mbody h3{margin:16px 0 4px;color:#e9b44c;font-size:12px;letter-spacing:.2em;font-weight:700;text-transform:uppercase}
+.btn{background:#e9b44c;color:#0b0a08;border:0;border-radius:99px;padding:9px 20px;font-weight:700;margin:12px 8px 0 0}.err{color:#ff8a80;font-size:13px}.mute{color:#9b9184;font-size:13px}

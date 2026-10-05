@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0a08">
+<title>Durga Pujo — Songs of the Festival</title>
+<meta name="description" content="A curated Durga Pujo & Mahalaya music experience. Pujo asche.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+Bengali:wght@600;700;800&family=Hind+Siliguri:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+
+@theme inline {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-bengali: "Noto Serif Bengali", serif;
+  --font-bengalisans: "Hind Siliguri", sans-serif;
+  --font-script: "Dancing Script", cursive;
+
+  --color-ink: #0b0a08;
+  --color-ink2: #14110c;
+  --color-panel: #191510;
+  --color-gold: #e9b44c;
+  --color-goldsoft: #f3cf87;
+  --color-cream: #efe9dd;
+  --color-mute: #9b9184;
+
+  --animate-dhak-ring: dhak-ring 1.5s ease-out infinite;
+  --animate-rise: rise 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fadein: fadein 0.3s ease both;
+  --animate-blink: blink 2s ease-in-out infinite;
+  --animate-pop: pop 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes dhak-ring {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #0b0a08;
+  color: #efe9dd;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+::selection {
+  background: rgba(233, 180, 76, 0.35);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.thin-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 99px;
+}
+.thin-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.thin-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.75) sepia(0.3) saturate(2) hue-rotate(-10deg);
+  cursor: pointer;
+}
+</style>
+<link rel="stylesheet" href="admin.css"></head>
+<body class="bg-ink font-sans text-cream">
+<div class="flex min-h-dvh justify-center bg-[#070605]"><div class="relative flex h-dvh w-full max-w-[520px] flex-col border-x border-white/5 bg-ink shadow-[0_0_120px_rgba(233,180,76,0.06)]">
+<header id="hdr" class="flex items-center justify-between gap-2 px-3 pt-3 pb-1"></header>
+<main id="hero" class="relative min-h-0 flex-1 overflow-hidden"></main>
+<div id="player" class="px-3 pb-3"></div></div></div>
+<div id="modal"></div>
+<script src="icons.js"></script><script src="app.js"></script><script src="admin.js"></script></body></html>
