@@ -1,0 +1,9 @@
+// First-run demo data (same as the original site). Used only when data/db.json does not exist yet.
+const S=[["Dugga Elo","Monali Thakur","2:27","monali",1,"durga_puja"],["Dugga Ma (Original Motion Picture Soundtrack)","Arijit Singh","4:31","dugga-ma",2,"durga_puja"],["Ebar Jeno Onno Rokom Pujo","Nakash Aziz Official","3:33","pujo",3,"durga_puja"],["Dhak Baja Kashor Baja","Shreya Ghoshal Official","4:26","dhak",4,"durga_puja"],["Bolo Dugga Elo","Kaushik-Guddu","3:20","bolo",1,"durga_puja"],["Aamaar Dugga","Monali Thakur","3:20","aamaar",2,"durga_puja"],["Dhaker Taley (Original Motion Picture Soundtrack)","Release","4:43","duo",3,"durga_puja"],["Dugga Elo","Akriti Kakar","3:58","monali",4,"durga_puja"],["Shundori Komola","Release","3:14","group",1,"durga_puja"],["Elo Je Maa","Abhijjeet Unplugged","5:08","group",2,"durga_puja"],["O Momo O Momo","Release","3:41","duo",3,"durga_puja"],["Progoan — Mahalaya Raga","Sri Aurobindo","5:56","mahalaya",2,"mahalaya"],["Ma Tumi Jaai","Kishore Kumar","3:12","dugga-ma",4,"mahalaya"],["Mahalaya Progoan (Live)","Ravi Shankar","6:04","mahalaya",1,"mahalaya_songs"],["Ma Amar Ma","Kishore Kumar","3:52","pujo",3,"mahalaya_songs"]];
+module.exports=()=>{
+  const d=new Date();d.setDate(d.getDate()+11);
+  const cnt={};let id=2;
+  const songs=S.map(([title,artist,duration,cv,n,playlist])=>({id:++id,title,artist,duration,audioUrl:`/audio/demo-${n}.wav`,youtubeUrl:'',coverUrl:`/images/covers/${cv}.jpg`,playlist,position:cnt[playlist]=(cnt[playlist]||0)+1}));
+  return{settings:{bengaliTitle:'পুজো আসছে',onlineCount:125,pujoDate:d.toISOString().slice(0,10),heroImage:'/images/hero-pandal.jpg',contactEmail:'devipakshaa@gmail.com',youtubeUrl:'',spotifyUrl:'',coffeeUrl:'',dhakLabel:'Dhak'},
+    creators:[{id:1,name:'Ritam Biswas',photoUrl:'',linkedin:'',instagram:'',position:1},{id:2,name:'Arup Matubber',photoUrl:'',linkedin:'',instagram:'',position:2}],songs,nextId:id+1};
+};
